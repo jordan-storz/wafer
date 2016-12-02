@@ -8,9 +8,10 @@ app.use(bodyParser.json());
 
 
     app.post('/wafers', function(req, res) {
-      res.send('test')
-      console.log(req.body);
-      console.log('POST REQ RECEIVED');
+      let responseBody = req.body;
+      responseBody.message = 'Enjoy!';
+      console.log(responseBody);
+      res.json(responseBody);
     })
 
 

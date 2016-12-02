@@ -8,17 +8,18 @@ $(document).ready(function(){
     }
 
     const orderJSON = JSON.stringify(order);
-    // $.post('http://localhost:3000/wafers', orderJSON, function(data) {
-    //   console.log(data);
-    //   console.log(orderJSON);
-    // })
+
     $.ajax({
-            type: 'POST',
-            url: 'http://localhost:3000/wafers',
-            data: orderJSON,
-            contentType: 'application/json; charset=utf-8',
-            dataType: 'json'
-        })
+      type: 'POST',
+      url: 'http://localhost:3000/wafers',
+      data: orderJSON,
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      success: function(data) {
+        let message = `${data.name}, ${data.message}`
+        $('#message').text(message);
+      }
+    })
 
   });
 })
