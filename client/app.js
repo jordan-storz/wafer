@@ -6,6 +6,10 @@ $(document).ready(function(){
       'name': name,
       'flavor': flavor
     }
-    console.log(order);
-  })
+    const orderJSON = JSON.stringify(order);
+    $.post('http://localhost:3000/wafers', orderJSON, function(data) {
+      //
+    })
+
+  });
 })
