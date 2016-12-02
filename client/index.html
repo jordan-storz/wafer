@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Wafers!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen" title="no title">
+</head>
 
-  </head>
-  <body>
+<body>
     <main>
-      <header>
-        <h2>Wafer order form</h2>
-      </header>
+        <header>
+            <h2>Wafer order form</h2>
+        </header>
 
-      <label for="client-name">Name
+        <label for="client-name">Name
       <input type="text" id="name" name="name" placeholder="Insert Name"></label>
-      <label for="wafers">Wafer Options
-      <select id="wafers" name="wafer">
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-        <option>Strawberry</option>
-        <option>Orange</option>
-      </select></label>
-      <input type="button" name="submit" id="submit" value="Submit Order">
 
-      <h2 id="message"></h2>
+        <a class='dropdown-button btn' href='#' data-activates='wafers'>Wafer Options</a>
+
+
+        <ul id='wafers' class='dropdown-content'>
+            <li><a href="#!">Chocolate</a></li>
+            <li><a href="#!">Vanilla</a></li>
+            <li><a href="#!">Strawberry</a></li>
+            <li><a href="#!">Orange</a></li>
+        </ul>
+        <br>
+        <br>
+
+        
+        <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit Order
+    <i class="material-icons right"></i>
+  </button>
+
+        <h2 id="message"></h2>
 
     </main>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="app.js">
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
     </script>
-  </body>
+    <script type="text/javascript" src="app.js">
+    </script>
+</body>
+
 </html>

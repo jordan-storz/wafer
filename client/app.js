@@ -18,7 +18,9 @@ $(document).ready(function(){
       success: function(data) {
         let message = `${data.name}, ${data.message}`
         $('#message').text(message);
+        console.log(data);
       }
+
     })
 
   });
